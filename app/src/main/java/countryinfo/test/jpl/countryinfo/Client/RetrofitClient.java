@@ -9,7 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    public static final String BASE_URL = "https://restcountries.eu/rest/v3/";
+    public static final String BASE_URL = "https://restcountries.eu/rest/v1/";
+    private static final String CACHE_CONTROL = "Cache-Control";
     private static Retrofit retrofit = null;
 
 
