@@ -88,7 +88,7 @@ public class RetrofitClient {
             @Override
             public Response intercept (Chain chain) throws IOException
             {
-                Response response = chain.proceed( chain.request() );
+                Response response = chain.proceed( chain.request() );;
 
                 // re-write response header to force use of cache
                 CacheControl cacheControl = new CacheControl.Builder()
