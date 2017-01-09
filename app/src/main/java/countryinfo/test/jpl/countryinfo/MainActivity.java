@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RetrofitInterface apiService = RetrofitClient.getClient().create(RetrofitInterface.class);
+        RetrofitInterface apiService = RetrofitClient.provideRetrofit().create(RetrofitInterface.class);
         mListPresenter = new ListPresenter(this, apiService);
 
         recyclerView= (RecyclerView) findViewById(R.id.recyclerViewCountries);
